@@ -5,7 +5,7 @@ build: build-ocaml
 build-ocaml:
 	dune build @install
 
-test: ocaml-src
+test:
 	dune runtest .
 
 test-coverage:
