@@ -1,3 +1,5 @@
+(* example.ml *)
+
 let error_ZeroInput     : int = 1
 let error_NegativeInput : int = 2
 
