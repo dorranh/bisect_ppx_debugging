@@ -1,0 +1,1 @@
+let failwith_error_code (i: int) : 'a = Stdlib.failwith (string_of_int i)

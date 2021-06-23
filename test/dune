@@ -1,0 +1,6 @@
+(test
+ (name tests)
+ (modules Tests)
+ (libraries src ounit2) ;; gotta reference the public_name here.
+ (preprocess
+  (pps ppx_deriving.std)))

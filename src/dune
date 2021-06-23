@@ -1,0 +1,23 @@
+;; The "preprocess" directive must be the same in every clause,
+;; otherwise there will be warnings printed about an inaccurate
+;; .merlin file being generated.
+
+;; ;; If one wishes to deactivate unused variable warnings (code 27) entirely
+;; (env
+;;  (dev
+;;   (flags (:standard -w -27))))
+
+;; If one wishes to make warnings non-fatal
+
+(env
+ (dev
+  (flags
+   (:standard -warn-error -A -w -53))))
+
+(library
+ (name cov_debug)
+ (public_name src)
+ (modules Example MyModuleWithFailures)
+ (wrapped false)
+ (instrumentation
+  (backend bisect_ppx)))
