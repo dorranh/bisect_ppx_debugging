@@ -14,8 +14,8 @@ test-coverage:
 	bisect-ppx-report summary
 
 clean:
-	$(RM) -r _build
+	$(RM) -r _build _coverage
 
 distclean: clean
 
-.PHONY: all build ocaml-src build-ocaml generate-ligo build-ligo tests clean indent spec docs distclean watch-spec view-spec
+.PHONY: all build build-ocaml test test-coverage clean distclean
